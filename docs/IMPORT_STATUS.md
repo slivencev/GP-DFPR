@@ -1,3 +1,9 @@
+# HISTORICAL SNAPSHOT — SUPERSEDED
+
+**The 50-file source-package import has since been completed.** See [SOURCE_IMPORT_COMPLETE.md](SOURCE_IMPORT_COMPLETE.md) and the [current 50-file SHA-256 manifest](../IMPORT_SHA256.json). The following report records an intermediate batch only and its outstanding items no longer describe the present GitHub source-transfer status.
+
+---
+
 # Source import status — 23 September 2026
 
 Author-supplied source: `GP_DFPR_GitHub_Source_Import.zip`, extracted from the author's GP-DFPR Supplementary Data S2 package. Import is **in progress**.
