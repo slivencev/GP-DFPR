@@ -1,0 +1,48 @@
+name: Validate imported GP-DFPR source
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "stages/**"
+      - "IMPORT_SHA256.json"
+      - "scripts/check_import_sha256.py"
+      - ".github/workflows/validate-import.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-source-and-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python 3.13
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Validate all 50 original SHA-256 hashes
+        run: python scripts/check_import_sha256.py
+      - name: Install frozen synthetic-study dependency
+        run: python -m pip install numpy==2.3.5
+      - name: Original v3 unit tests
+        working-directory: stages/GP_DFPR_Partial_Observation_v3
+        run: python test_prototype.py
+      - name: Original v9 unit tests (not its predecessor-dependent full study)
+        working-directory: stages/GP_DFPR_Periodic_v9
+        run: python -m unittest run_study.Tests -v
+      - name: Original v14 evidence-unit tests
+        working-directory: stages/GP_DFPR_Observation_Model_v14
+        run: python test_evidence.py
+      - name: Imported v15 component curve sanity check
+        working-directory: stages/GP_DFPR_MCS_Observation_v15
+        run: |
+          python - <<'PY'
+          import numpy as np
+          import observation
+          for curve in observation.CURVES.values():
+              assert np.all(np.diff(curve["sinr_db"]) > 0)
+              assert np.all(np.diff(curve["code_bler"]) <= 0)
+          print("PASS: three imported MCS surrogate curve tables are monotone")
+          PY
