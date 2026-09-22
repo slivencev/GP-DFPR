@@ -1,0 +1,11 @@
+# Meaning of the matched conditional bound
+
+At episode start r, both online rules and the exact verifier receive the same interval cache. At target T, the upper bound for coordinate i of alternative a is the minimum of the propagated initial upper bound and all propagated queried upper bounds, capped by the model range. It is negative iff at least one of these sources is negative. Thus a certificate of global infeasibility can be supported by at most one negative source per alternative; initial sources consume no new slots and each remaining alternative needs one admissible measurement slot.
+
+Every actual online certificate therefore induces a matching in the verifier's graph. Both algorithms have the same initial information, available slots and per-step budget; the verifier additionally knows all future measurement outcomes and need not follow the online stopping rule. Hence online detection at each target implies verifier feasibility, as asserted on all 28336 online-target checks. Conversely a matching supplies a feasible single-target query schedule under these assumptions.
+
+This is a conditional per-target upper bound on diagnostic recall in the fixed context. It does not imply that one online or offline schedule can attain all individually feasible targets simultaneously. It does not bound control GPR, alternative execution paths, other initial information, predictive models with tighter valid bounds, or measurement systems with different costs.
+
+We replay reference execution paths rather than execute the counterfactual actions requested by each acquisition rule. This deliberately controls the measurement blackout mask and current-action state. Therefore the comparison isolates acquisition conditional on those paths; it is not a closed-loop comparison of newly deployed controllers. Each episode is reset to its reference initial cache and acquisition history.
+
+v12 is a reanalysis of v9 traces selected using earlier work. It strengthens the interpretation of those results but is not new independent experimental evidence. Statistical intervals use source-run pairing; overlapping episodes and the two reference origins must not be counted as independent repetitions. No novel algorithmic priority or field validation is claimed.

@@ -1,0 +1,10 @@
+{
+  "goal_Mbps": 3.6,
+  "calibration_pairs": 16222,
+  "radii_Mbps": {
+    "Nominal": 0.0,
+    "Gaussian-1.645-SD": 0.19753713708544385,
+    "Empirical-95q": 0.17801599999999995
+  },
+  "guarantee": "none; temporally dependent residual calibration, not conformal coverage"
+}

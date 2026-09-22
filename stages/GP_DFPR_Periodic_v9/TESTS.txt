@@ -1,0 +1,8 @@
+test_decomposition (__main__.Tests.test_decomposition) ... ok
+test_durations (__main__.Tests.test_durations) ... ok
+test_paired_bounds (__main__.Tests.test_paired_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.217s
+
+OK

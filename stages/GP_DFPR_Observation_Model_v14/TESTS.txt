@@ -1,0 +1,14 @@
+test_delivery_age_and_execution (test_evidence.Tests.test_delivery_age_and_execution) ... ok
+test_error_propagation (test_evidence.Tests.test_error_propagation) ... ok
+test_provenance_required (test_evidence.Tests.test_provenance_required) ... ok
+test_quantile_insufficient_sample (test_evidence.Tests.test_quantile_insufficient_sample) ... ok
+test_statistical_is_not_hard (test_evidence.Tests.test_statistical_is_not_hard) ... ok
+test_undelivered_and_expired (test_evidence.Tests.test_undelivered_and_expired) ... ok
+test_unknown_blocks_global_infeasibility (test_evidence.Tests.test_unknown_blocks_global_infeasibility) ... ok
+test_unsupported_action_and_domain (test_evidence.Tests.test_unsupported_action_and_domain) ... ok
+test_zero_is_feasible (test_evidence.Tests.test_zero_is_feasible) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+OK

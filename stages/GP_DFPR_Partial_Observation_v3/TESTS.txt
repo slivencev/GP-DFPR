@@ -1,0 +1,14 @@
+test_bound_breach_is_not_physical_infeasibility (__main__.Verification.test_bound_breach_is_not_physical_infeasibility) ... ok
+test_cold_start_budget (__main__.Verification.test_cold_start_budget) ... ok
+test_delay_negative_control (__main__.Verification.test_delay_negative_control) ... ok
+test_depth_bracket (__main__.Verification.test_depth_bracket) ... ok
+test_no_safe_does_not_mean_infeasible (__main__.Verification.test_no_safe_does_not_mean_infeasible) ... ok
+test_noise_and_delay_floor (__main__.Verification.test_noise_and_delay_floor) ... ok
+test_refresh_window_certificate (__main__.Verification.test_refresh_window_certificate) ... ok
+test_replay_all_policies_and_delays (__main__.Verification.test_replay_all_policies_and_delays) ... ok
+test_unobserved_candidate_blocks_global_certificate (__main__.Verification.test_unobserved_candidate_blocks_global_certificate) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.547s
+
+OK

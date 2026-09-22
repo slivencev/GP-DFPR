@@ -1,0 +1,6 @@
+{
+  "exhaustive_graphs": 512,
+  "random_nested_window_cases": 500,
+  "strict_expiry_and_empty_tests": 2,
+  "status": "PASS"
+}
