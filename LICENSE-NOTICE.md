@@ -1,13 +1,11 @@
-# Licensing and third-party attribution notice
+# License summary and third-party attribution
 
-The GP-DFPR manuscript's Data and Code Availability statement identifies the following intended license split for its **original** research materials:
+The author's definitive [LICENSES_AND_REUSE.txt](LICENSES_AND_REUSE.txt) has now been imported in full from the original supplied research archive.
 
-- Original simulator code: MIT.
-- Original data and narrative documentation: Creative Commons Attribution 4.0 International (CC BY 4.0).
-- Third-party materials: subject to their original licenses and attribution notices as specified in the Zenodo deposit.
+- **Original author software:** MIT, only to the extent of the author's rights.
+- **Original research data and narrative documentation:** Creative Commons Attribution 4.0 International (CC BY 4.0).
+- **Third-party numerical arrays and derivative components:** retain original license conditions and attribution; they are not relicensed by the author's MIT/CC BY grants.
 
-Archived reference: https://doi.org/10.5281/zenodo.22893667 (version 1.0.0 as cited in the manuscript).
+The original v15 [SOURCE_LICENSE](stages/GP_DFPR_MCS_Observation_v15/SOURCE_LICENSE) includes GPL-2.0 terms. Its [UPSTREAM_PROVENANCE.md](stages/GP_DFPR_MCS_Observation_v15/UPSTREAM_PROVENANCE.md) describes the source and verification of external arrays.
 
-This notice **does not** relicense third-party code, curves, numerical tables, or documentation. Before importing files, inspect the deposited file-level license texts and preserve their notices. Add exact license files and an inventory of third-party components after this review.
-
-Author: Serhii Liventsev.
+Research archive cited by the manuscript: https://doi.org/10.5281/zenodo.22893667 (version 1.0.0).
