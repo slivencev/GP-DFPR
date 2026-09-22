@@ -1,39 +1,25 @@
 # GP-DFPR reproducibility and provenance
 
-This document describes the status of the companion GitHub repository for the manuscript *Goal-Preserving Network Reconfiguration under Partial Observability and Execution Delays* (Serhii Liventsev).
+## Imported code: verification complete
 
-## Stated archival source
+The repository contains the complete **50-file author-selected source import** for stages v3, v9, v11, v12, v14 and v15. The checksum-pinned GitHub Actions importer downloaded the referenced S2 ZIP only after verifying its SHA-256 against the author's uploaded original and validating the nested source archives. The import committed [the 50-file source set](SOURCE_IMPORT_COMPLETE.md) and [SHA-256 manifest](../IMPORT_SHA256.json), preserving original source bytes and the v15 GPL-2.0 notice.
 
-The manuscript cites the version 1.0.0 archive: https://doi.org/10.5281/zenodo.22893667.
+Reference: Serhii Liventsev, *GP-DFPR: Simulator and Experimental Data for Goal-Preserving Network Reconfiguration under Partial Observability and Execution Delays*, version 1.0.0. https://doi.org/10.5281/zenodo.22893667.
 
-It states that the deposit contains simulator source files, frozen experimental protocols, run-level results, synthetic trajectories, checksums, figure data, and a claim-to-evidence index. The manuscript identifies four source-study versions: v3 (earlier acquisition), v9 (periodic control), v12 (matched replay), and v15 (shared observations).
+## Reproducibility is narrower than source transfer
 
-**Verification status:** The content and availability of the Zenodo deposit have not yet been independently checked for this GitHub import. No source code, raw data, or executable reproduction pipeline has yet been imported to this repository. The presence of a DOI in this file is not proof that the listed files have been verified.
+The full archived raw traces, result CSVs, nested source ZIP archives and supplementary figure data remain in Supplementary Data S2. A source-package checkout by itself does not include all the historical input/output data. The authentic v8 predecessor required by the v9 full original run is absent from the supplied collection; preserve that limitation. Do not use a fabricated v8 archive or silently bypass its original checkpoint.
 
-## Manuscript-to-experiment map
+Previously executed tests and local reproduction of the v15 synthetic component experiment are separately documented in [EXECUTION_AUDIT.md](EXECUTION_AUDIT.md). Successful unit tests do not establish end-to-end field validity, full v9 reproduction, closed-loop stability or calibrated physical safety.
 
-| Study | Manuscript location | Stated scope |
-| --- | --- | --- |
-| Periodic closed-loop control | Sections 6–7 | 24 configurations; 768 controller runs, 230,400 scored steps |
-| Matched-context acquisition replay | Section 7.1 | 192 reference runs and 776 episode contexts |
-| Shared-SINR surrogate component | Section 8 | 30 synthetic SINR trajectories; three MCS configurations |
-| Supplementary material | S1, S2 as named in manuscript | Detailed protocols and archived research data |
+## Before an additional reproducibility release
 
-These studies answer different questions and must not be pooled as independent validation.
+1. Obtain and verify the authentic v8 predecessor if claiming a complete original v9 rerun.
+2. Re-run v12 from its complete documented predecessor and original reference contexts; compare all recorded outputs.
+3. Regenerate the manuscript's tabular and plotted figures from the archived primary result data; independently check bootstrap implementation and independent-run sample counts.
+4. Preserve all third-party licensing, particularly v15 GPL-2.0 and the curve-provenance documentation.
+5. Record exact runtime versions, commands, seeds, outputs, discrepancies and original-data hash digests. Tag a versioned GitHub release only after its scope has been explicitly defined and verified.
 
-## Required checks before declaring the repository reproducible
+## Interpretation
 
-1. Download and inspect the *actual* Zenodo archive; record deposited filenames, sizes, license notices, and original checksums.
-2. Confirm that each of v3, v9, v12, and v15 exists in the deposit and identify its entry point and exact input/output file paths.
-3. Preserve the deposited source and provenance; do not silently rewrite the original experiment or substitute synthetic outputs.
-4. Record runtime version, operating system, package versions, installation steps, random seeds, and end-to-end execution commands from verified source.
-5. Regenerate and compare manuscript claims, tables, and all four figures against deposited result files; document any discrepancy.
-6. Identify third-party source, data, and curve licensing separately from the author's original code and data.
-7. Run a clean-environment reproduction test and publish the resulting verification log, checksums, and limitations.
-8. Publish a versioned GitHub release only after these checks; link it to the corresponding Zenodo version without changing the existing archive retroactively.
-
-## Important interpretation limits
-
-The manuscript's certificates rely on enforced error and drift bounds, valid model assumptions, and the specified execution schedule. Arrival-time certification is not continuous service certification. The closed-loop plant and SINR component study are synthetic; neither represents independent hardware or deployed O-RAN validation.
-
-Contact: Serhii Liventsev, s.liventsev@kpi.ua.
+The manuscript's certificates rely on enforced measurement-error, drift, model-range and execution-delay bounds. Certification at command completion does not guarantee uninterrupted service. The source studies are synthetic; the shared-SINR component uses the same surrogate curve family for prediction and evaluation. Do not present the deposited package as hardware or deployed O-RAN validation.
