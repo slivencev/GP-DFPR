@@ -1,0 +1,38 @@
+name: Import checksum-verified S2 source files
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/import-verified-s2.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gp-dfpr-import
+  cancel-in-progress: false
+
+jobs:
+  import-original-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out current repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify original Zenodo archive and import exact selected source bytes
+        run: python3 scripts/import_verified_s2.py
+      - name: Publish only verified staged source and SHA-256 index
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- stages/ IMPORT_SHA256.json
+          if git diff --cached --quiet; then
+            echo 'All 50 imported source files already match the original archive.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Import 50 checksum-verified original GP-DFPR stage files'
+          git push origin HEAD:main
