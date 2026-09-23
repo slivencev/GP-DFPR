@@ -16,6 +16,6 @@ Research archive version 1.0.0 identified by the author: https://doi.org/10.5281
 
 ## What remains outside GitHub
 
-The full historical ZIP archives, raw traces, archived result tables and figure-data CSVs belong to the complete Supplementary Data S2 deposit, rather than this selected source-package import. The authentic v8 predecessor needed by the full original v9 entry point was not among the eight supplied historical archives.
+The full historical ZIP archives, raw traces, archived result tables and figure-data CSVs belong to the complete Supplementary Data S2 deposit, rather than this selected source-package import. The authentic v8 predecessor was subsequently provided separately by the author; its SHA-256 matched the original v9 checkpoint and the complete synthetic v9 study was rerun. The v8 binary is retained outside the public GitHub source checkout. See [v8 recovery and v9 rerun](V8_RECOVERY_AND_V9_RERUN.md).
 
-An imported runnable-looking script is not itself an independently reproduced study or a deployed-network guarantee. The completed historical tests and separately rerun v15 component experiment are documented in [EXECUTION_AUDIT.md](EXECUTION_AUDIT.md). No new full re-execution of every stage is claimed.
+An imported runnable-looking script is not itself an independently reproduced study or a deployed-network guarantee. The completed historical tests and separately rerun v15 component experiment are documented in [EXECUTION_AUDIT.md](EXECUTION_AUDIT.md). The full synthetic v9 computation has since been rerun; no new end-to-end re-execution of every other stage is claimed.
