@@ -8,13 +8,13 @@ Reference: Serhii Liventsev, *GP-DFPR: Simulator and Experimental Data for Goal-
 
 ## Reproducibility is narrower than source transfer
 
-The full archived raw traces, result CSVs, nested source ZIP archives and supplementary figure data remain in Supplementary Data S2. A source-package checkout by itself does not include all the historical input/output data. The authentic v8 predecessor required by the v9 full original run is absent from the supplied collection; preserve that limitation. Do not use a fabricated v8 archive or silently bypass its original checkpoint.
+The full archived raw traces, result CSVs, nested source ZIP archives and supplementary figure data remain in Supplementary Data S2. A source-package checkout by itself does not include all the historical input/output data. The authentic v8 predecessor was subsequently supplied separately by the author, passed its original archive manifest and historical v9 checkpoint, and enabled a complete rerun of v9. The four archived v9 CSV outputs were reproduced byte-for-byte. The v8 binary remains outside this public GitHub checkout; see [v8 recovery and v9 rerun](V8_RECOVERY_AND_V9_RERUN.md). Never bypass the original checkpoint.
 
-Previously executed tests and local reproduction of the v15 synthetic component experiment are separately documented in [EXECUTION_AUDIT.md](EXECUTION_AUDIT.md). Successful unit tests do not establish end-to-end field validity, full v9 reproduction, closed-loop stability or calibrated physical safety.
+Previously executed tests and local reproduction of the v15 synthetic component experiment are separately documented in [EXECUTION_AUDIT.md](EXECUTION_AUDIT.md). The complete synthetic v9 experiment was separately rerun after recovery of authentic v8. Successful synthetic tests and v9 reproduction do not establish end-to-end field validity, closed-loop stability or calibrated physical safety.
 
 ## Before an additional reproducibility release
 
-1. Obtain and verify the authentic v8 predecessor if claiming a complete original v9 rerun.
+1. For any independent v9 recheck, obtain the original author-supplied v8 binary separately and verify its documented SHA-256 before execution.
 2. Re-run v12 from its complete documented predecessor and original reference contexts; compare all recorded outputs.
 3. Regenerate the manuscript's tabular and plotted figures from the archived primary result data; independently check bootstrap implementation and independent-run sample counts.
 4. Preserve all third-party licensing, particularly v15 GPL-2.0 and the curve-provenance documentation.
