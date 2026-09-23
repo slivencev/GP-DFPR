@@ -1,4 +1,4 @@
-# Independent execution audit — 23 September 2026
+# Historical execution audit (superseded v9 status)\n\n**Update, 23 September 2026:** The authentic v8 predecessor has been recovered separately and verified against the original v9 checkpoint. The full v9 synthetic study has since been rerun (768 controller runs; four archived CSV outputs byte-identical). See [v8 recovery and v9 rerun](V8_RECOVERY_AND_V9_RERUN.md). The report below records the earlier state before recovery.\n\n---\n\n# Independent execution audit — 23 September 2026
 
 Scope: author-uploaded `Supplementary_Data_S2.zip`, not a download from the public DOI. All original source files were inspected in a separate staging directory. The only rerun results described here are generated from those files.
 
