@@ -26,7 +26,7 @@ The author's original `LICENSES_AND_REUSE.txt` accompanies the stage files. Orig
 
 - The complete original bulk output/trace ZIP archives and supplementary figure-data CSVs remain in Supplementary Data S2, rather than being duplicated into GitHub.
 - The previously recorded local tests and v15 reproduction are documented in `EXECUTION_AUDIT.md`; source import does **not** constitute a new end-to-end execution or independent hardware validation.
-- The complete original v9 entry point requires an authentic v8 predecessor missing from the supplied S2 collection. Do not remove or bypass this provenance check without documenting the intervention.
+- The original v9 entry point's authentic v8 predecessor was subsequently recovered separately from the author and verified against the original checkpoint. Full v9 was rerun with four published CSV outputs byte-identical. The original v8 ZIP is retained outside this GitHub source checkout; see [v8 recovery and v9 rerun](V8_RECOVERY_AND_V9_RERUN.md).
 - The numerical studies remain synthetic and their guarantees are conditional on their stated assumptions.
 - No GitHub versioned release or publication-status claim has been issued solely on the strength of this import.
 
